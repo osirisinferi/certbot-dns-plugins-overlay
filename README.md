@@ -25,7 +25,7 @@ Lastly, move the repo configuration file to the correct directory:
 
 ```
 mkdir -p /etc/portage/repos.conf
-mv /var/db/repos/certbot-dns-plugins-overlay/certbot-dns-plugins.conf /etc/portage/repos.conf/
+ln -s /var/db/repos/certbot-dns-plugins-overlay/certbot-dns-plugins.conf /etc/portage/repos.conf/
 ```
 
 Note: `repos.conf` can also be a file, but a directory is prefered according to [the Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64/Portage/Files#Gentoo_ebuild_repository).
