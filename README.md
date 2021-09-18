@@ -1,5 +1,7 @@
 
 # OsirisInferis overlay for the DNS plugins of the ACME client [certbot](https://github.com/certbot/certbot/)
+[![pkgcheck](https://github.com/osirisinferi/certbot-dns-plugins-overlay/workflows/pkgcheck/badge.svg)](https://github.com/osirisinferi/certbot-dns-plugins-overlay/actions?query=workflow%3Apkgcheck)
+[![repoman](https://github.com/osirisinferi/certbot-dns-plugins-overlay/workflows/repoman/badge.svg)](https://github.com/osirisinferi/certbot-dns-plugins-overlay/actions?query=workflow%3Arepoman)
 
 ## Description
 
