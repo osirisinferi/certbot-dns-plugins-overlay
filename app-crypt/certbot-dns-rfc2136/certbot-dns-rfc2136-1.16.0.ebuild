@@ -24,7 +24,8 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 
-RDEPEND="=app-crypt/certbot-${PV%.*}*[${PYTHON_USEDEP}]
-	=app-crypt/acme-${PV%.*}*[${PYTHON_USEDEP}]
+RDEPEND="${CDEPEND}
+	>=app-crypt/certbot-1.1.0[${PYTHON_USEDEP}]
+	>=app-crypt/acme-0.29.0[${PYTHON_USEDEP}]
 	dev-python/zope-interface[${PYTHON_USEDEP}]
 	dev-python/dnspython[${PYTHON_USEDEP}]"

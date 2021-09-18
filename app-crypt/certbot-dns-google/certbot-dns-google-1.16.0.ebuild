@@ -17,14 +17,15 @@ fi
 
 inherit distutils-r1
 
-DESCRIPTION="RFC2136 DNS plugin for Certbot (Let's Encrypt Client)"
+DESCRIPTION="Google Cloud DNS plugin for Certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 
-RDEPEND="=app-crypt/certbot-${PV%.*}*[${PYTHON_USEDEP}]
-	=app-crypt/acme-${PV%.*}*[${PYTHON_USEDEP}]
+RDEPEND=">=app-crypt/certbot-1.1.0[${PYTHON_USEDEP}]
+	>=app-crypt/acme-0.29.0[${PYTHON_USEDEP}]
 	dev-python/zope-interface[${PYTHON_USEDEP}]
-	dev-python/dnspython[${PYTHON_USEDEP}]"
+	>=dev-python/google-api-python-client-1.5.5[${PYTHON_USEDEP}]
+	>=dev-python/oauth2client-4.0[${PYTHON_USEDEP}]"
