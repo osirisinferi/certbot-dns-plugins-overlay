@@ -2,9 +2,19 @@ name: pkgcheck
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - development
+    paths:
+      - 'app-crypt/**'
+      - 'dev-python/**'
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+      - development
+    paths:
+      - 'app-crypt/**'
+      - 'dev-python/**'
   schedule:
     - cron: '0 0 * * *'
 
