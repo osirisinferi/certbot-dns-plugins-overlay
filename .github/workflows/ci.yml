@@ -11,12 +11,38 @@ on:
     - cron: '0 1 * * *'
 
 jobs:
-  hello_world_job:
+  ci_job:
     runs-on: ubuntu-latest
     name: CI
     steps:
+      - name: Get year/month
+        id: get-year-month
+        run: |
+          echo "::set-output name=date::$(/bin/date -u "+%Y%m")"
+        shell: bash
+
       - name: Check out the repo
         uses: actions/checkout@v2
+
+      - name: Cache portage binary packages
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-binpgks
+        with:
+          path: var/cache/binpkgs/**
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ secrets.CACHE_VERSION }}-${{ steps.get-year-month.outputs.date }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-${{ secrets.CACHE_VERSION }}-
+      - name: Cache portage distfiles
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-distfiles
+        with:
+          path: var/cache/distfiles/**
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ secrets.CACHE_VERSION }}-${{ steps.get-year-month.outputs.date }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-${{ secrets.CACHE_VERSION }}-
+
       - name: CI
         id: docker
-        uses: osirisinferi/certbot-dns-plugins-ci@v0.6
+        uses: osirisinferi/certbot-dns-plugins-ci@v0.20
