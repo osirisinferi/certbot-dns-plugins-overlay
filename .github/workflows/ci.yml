@@ -45,4 +45,4 @@ jobs:
 
       - name: CI
         id: docker
-        uses: osirisinferi/certbot-dns-plugins-ci@v0.20
+        uses: osirisinferi/certbot-dns-plugins-ci@v0.22
