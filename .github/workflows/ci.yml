@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - master
+      - development
+    paths:
+      - 'app-crypt/**'
+      - 'dev-python/**'
+  pull_request:
+    branches:
+      - master
+      - development
     paths:
       - 'app-crypt/**'
       - 'dev-python/**'
@@ -45,4 +53,4 @@ jobs:
 
       - name: CI
         id: docker
-        uses: osirisinferi/certbot-dns-plugins-ci@v0.22
+        uses: osirisinferi/certbot-dns-plugins-ci@v0.23
