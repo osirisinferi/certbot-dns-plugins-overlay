@@ -8,6 +8,7 @@ on:
     paths:
       - 'app-crypt/**'
       - 'dev-python/**'
+      - '.github/workflows/**'
   pull_request:
     branches:
       - main
@@ -53,4 +54,4 @@ jobs:
 
       - name: CI
         id: docker
-        uses: osirisinferi/certbot-dns-plugins-ci@v0.23
+        uses: osirisinferi/certbot-dns-plugins-ci@v0.24
