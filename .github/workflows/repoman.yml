@@ -3,14 +3,14 @@ name: repoman
 on:
   push:
     branches:
-      - master
+      - main
       - development
     paths:
       - 'app-crypt/**'
       - 'dev-python/**'
   pull_request:
     branches:
-      - master
+      - main
       - development
     paths:
       - 'app-crypt/**'
