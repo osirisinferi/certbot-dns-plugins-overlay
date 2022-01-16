@@ -25,6 +25,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run pkgcheck
-      uses: osirisinferi/pkgcheck-action@v1.1
+      uses: pkgcore/pkgcheck-action@v1
       with:
         args: --keywords=-RedundantVersion,-MissingAccountIdentifier,-OldPackageUpdate,-VisibleVcsPkg
