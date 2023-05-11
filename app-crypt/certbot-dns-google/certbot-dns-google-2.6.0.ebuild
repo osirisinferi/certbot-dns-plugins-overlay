@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=(python3_10)
+PYTHON_COMPAT=( python3_{10..11} )
 DISTUTILS_USE_SETUPTOOLS=rdepend
 
 if [[ ${PV} == 9999* ]]; then
@@ -26,5 +26,5 @@ IUSE=""
 
 RDEPEND=">=app-crypt/certbot-${PV}[${PYTHON_USEDEP}]
 	>=app-crypt/acme-${PV}[${PYTHON_USEDEP}]
-	>=dev-python/google-api-python-client-1.5.5[${PYTHON_USEDEP}]
-	>=dev-python/oauth2client-4.0[${PYTHON_USEDEP}]"
+	>=dev-python/google-api-python-client-1.6.5[${PYTHON_USEDEP}]
+	>=dev-python/google-auth-2.16.0[${PYTHON_USEDEP}]"
