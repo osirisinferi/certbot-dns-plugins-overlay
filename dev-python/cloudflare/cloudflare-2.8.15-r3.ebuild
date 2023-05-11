@@ -5,7 +5,7 @@ EAPI=7
 
 MY_PN="python-${PN}"
 
-PYTHON_COMPAT=( python3_{8..10} )
+PYTHON_COMPAT=( python3_{10..11} )
 inherit distutils-r1
 
 DESCRIPTION="Python wrapper for the Cloudflare v4 API"
