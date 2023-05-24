@@ -6,6 +6,7 @@
 		<name>Osiris Inferi</name>
 	</maintainer>
 	<upstream>
+		<remote-id type="pypi">python-digitalocean</remote-id>
 		<remote-id type="github">koalalorenzo/python-digitalocean</remote-id>
 	</upstream>
 </pkgmetadata>

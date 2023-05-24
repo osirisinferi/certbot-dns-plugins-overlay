@@ -1,15 +1,16 @@
 # Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="7"
+EAPI="8"
 
+DISTUTILS_USE_PEP517=setuptools
+PYPI_NO_NORMALIZE=1
 PYTHON_COMPAT=( python3_{10..11} )
 
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="digitalocean.com API to manage Droplets and Images"
 HOMEPAGE="https://github.com/koalalorenzo/python-digitalocean https://pypi.org/project/python-digitalocean/"
-SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -20,9 +21,7 @@ RESTRICT="!test? ( test )"
 RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/jsonpickle[${PYTHON_USEDEP}]"
 DEPEND="${REDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
-		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/pytest[${PYTHON_USEDEP}]
 	)"
 
