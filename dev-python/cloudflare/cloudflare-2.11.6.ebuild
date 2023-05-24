@@ -3,21 +3,18 @@
 
 EAPI=7
 
-MY_PN="python-${PN}"
-
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
-inherit distutils-r1
+
+inherit distutils-r1 pypi
 
 DESCRIPTION="Python wrapper for the Cloudflare v4 API"
-HOMEPAGE="https://pypi.org/project/cloudflare/"
-SRC_URI="https://github.com/cloudflare/${MY_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://pypi.org/project/cloudflare/ https://github.com/cloudflare/python-cloudflare"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
-S="${WORKDIR}/python-${P}"
 
 DEPEND="dev-python/jsonlines[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}

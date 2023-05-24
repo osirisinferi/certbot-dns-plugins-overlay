@@ -6,6 +6,7 @@
 		<name>Osiris Inferi</name>
 	</maintainer>
 	<upstream>
+		<remote-id type="pypi">cloudflare</remote-id>
 		<remote-id type="github">cloudflare/python-cloudflare</remote-id>
 	</upstream>
 </pkgmetadata>
