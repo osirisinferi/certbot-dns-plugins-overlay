@@ -6,6 +6,7 @@
 		<name>Osiris Inferi</name>
 	</maintainer>
 	<upstream>
+		<remote-id type="pypi">jsonlines</remote-id>
 		<remote-id type="github">wbolster/jsonlines</remote-id>
 	</upstream>
 </pkgmetadata>
