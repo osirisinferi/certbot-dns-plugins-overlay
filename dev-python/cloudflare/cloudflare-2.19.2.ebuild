@@ -18,14 +18,13 @@ IUSE=""
 
 DEPEND="dev-python/jsonlines[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
-	dev-python/future[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.4.2[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup4[${PYTHON_USEDEP}]"
 BDEPEND=""
 
 python_prepare_all() {
-	sed -r -e "/packages *=/ s|\[[^]]*\]\+||" -i -- setup.py
+	sed -r -e "/packages *=/ s|\[.*\]|['CloudFlare', 'cli4']|" -i -- setup.py
 
 	rm -r examples
 
