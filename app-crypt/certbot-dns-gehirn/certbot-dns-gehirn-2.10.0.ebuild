@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="https://github.com/certbot/certbot.git"
@@ -18,14 +18,13 @@ fi
 
 inherit distutils-r1
 
-DESCRIPTION="Route53 DNS plugin for Certbot (Let's Encrypt Client)"
+DESCRIPTION="Gehirn Infrastructure Service DNS plugin for Certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 
-RDEPEND="${CDEPEND}
-	>=app-crypt/certbot-${PV}[${PYTHON_USEDEP}]
+RDEPEND=">=app-crypt/certbot-${PV}[${PYTHON_USEDEP}]
 	>=app-crypt/acme-${PV}[${PYTHON_USEDEP}]
-	>=dev-python/boto3-1.15.15[${PYTHON_USEDEP}]"
+	>=dev-python/dns-lexicon-3.2.1[${PYTHON_USEDEP}]"

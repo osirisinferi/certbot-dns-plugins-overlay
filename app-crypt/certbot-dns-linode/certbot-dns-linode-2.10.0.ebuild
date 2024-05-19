@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="https://github.com/certbot/certbot.git"
@@ -18,7 +18,7 @@ fi
 
 inherit distutils-r1
 
-DESCRIPTION="Sakura Cloud DNS plugin for Certbot (Let's Encrypt Client)"
+DESCRIPTION="Linode DNS plugin for Certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
 
 LICENSE="Apache-2.0"
