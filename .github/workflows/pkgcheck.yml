@@ -27,4 +27,4 @@ jobs:
     - name: Run pkgcheck
       uses: pkgcore/pkgcheck-action@v1
       with:
-        args: --keywords=-RedundantVersion,-MissingAccountIdentifier,-OldPackageUpdate,-VisibleVcsPkg
+        args: --keywords=-RedundantVersion,-MissingAccountIdentifier,-OldPackageUpdate,-VisibleVcsPkg --profiles=default/linux/amd64/23.0,default/linux/x86/23.0/i686,default/linux/arm/23.0,default/linux/arm64/23.0
