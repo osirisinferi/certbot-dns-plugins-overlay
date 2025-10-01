@@ -26,5 +26,4 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=app-crypt/certbot-${PV}[${PYTHON_USEDEP}]
-	>=app-crypt/acme-${PV}[${PYTHON_USEDEP}]
 	>=dev-python/python-digitalocean-1.15[${PYTHON_USEDEP}]"
