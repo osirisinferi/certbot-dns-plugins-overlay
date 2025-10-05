@@ -9,6 +9,8 @@ Currently, the only certbot DNS plugin in the official Gentoo Portage tree is [c
 
 Note: the working of the plugins (besides certbot-dns-rfc2136) is NOT garanteed, as I don't have any means to test them all.
 
+Update 2025-10-05: since `app-crypt/certbot-3.2.0-r200`, the Certbot ebuild includes all the modules from the Certbot repository, including the `acme` library and most of the official DNS plugins. Only the `dns-cloudflare` and `dns-digitalocean` plugins are not included at this moment, due to missing dependencies in the official Gentoo repository. As older Certbot ebuilds have been removed from the Gentoo repository, there's no need to keep most of the DNS plugins in this overlay. Only `app-crypt/certbot-dns-cloudflare` and `app-crypt/certbot-dns-digitalocean` are left here currently, the others have been removed.
+
 ## Instructions
 
 ### Recommended method
