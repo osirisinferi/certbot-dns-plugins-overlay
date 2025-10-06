@@ -26,4 +26,5 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=app-crypt/certbot-${PV}[${PYTHON_USEDEP}]
-	>=dev-python/cloudflare-2.19.0[${PYTHON_USEDEP}]"
+	>=dev-python/cloudflare-2.19.0[${PYTHON_USEDEP}]
+	<dev-python/cloudflare-2.20.0[${PYTHON_USEDEP}]"
