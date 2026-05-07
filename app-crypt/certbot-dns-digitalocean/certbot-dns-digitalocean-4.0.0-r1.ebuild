@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{11..13} )
+PYTHON_COMPAT=( python3_{12..13} )
 
 if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="https://github.com/certbot/certbot.git"
@@ -18,7 +18,7 @@ fi
 
 inherit distutils-r1
 
-DESCRIPTION="Cloudflare DNS plugin for Certbot (Let's Encrypt Client)"
+DESCRIPTION="DigitalOcean DNS plugin for Certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/certbot/certbot https://letsencrypt.org/"
 
 LICENSE="Apache-2.0"
@@ -26,5 +26,4 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=app-crypt/certbot-${PV}[${PYTHON_USEDEP}]
-	>=dev-python/cloudflare-2.19.0[${PYTHON_USEDEP}]
-	<dev-python/cloudflare-2.20.0[${PYTHON_USEDEP}]"
+	>=dev-python/python-digitalocean-1.15[${PYTHON_USEDEP}]"
